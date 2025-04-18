@@ -87,5 +87,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "#000",
   },
-  
+  row:{
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 10,
+  },
+  button: {
+    backgroundColor: '#ddd',
+    padding: 20,
+    borderRadius: 5,
+    minWidth: 70,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize: 24,
+    color: '#000',
+  }
 });
