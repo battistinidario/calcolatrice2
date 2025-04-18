@@ -45,10 +45,27 @@ export default function app(){
         {bottoni("9")}
         {bottoni("+")}
       </View>
-
+      <View style={styles.row}>
+        {bottoni("4")}
+        {bottoni("5")}
+        {bottoni("6")}
+        {bottoni("=")}
+      </View>
+      <View style={styles.row}>
+        {bottoni("1")}
+        {bottoni("2")}
+        {bottoni("3")}
+        {bottoni("0")}
+      </View>
+      <View style={styles.row}>
+        {bottoni(".")}
+        {bottoni("M+")}
+        {bottoni("M-")}
+        {bottoni("RM")}
+      </View>
     </View>
   );
-
+  
 }
 
 const styles = StyleSheet.create({
