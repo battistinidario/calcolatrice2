@@ -27,14 +27,7 @@ const bottoni = (value) => (
   </TouchableOpacity>
 );
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>ciao sono</Text>
-      <StatusBar style="auto" />
-    </View> 
-  );
-}
+
 
 const styles = StyleSheet.create({
   container: {
