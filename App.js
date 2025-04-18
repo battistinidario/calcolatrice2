@@ -63,9 +63,10 @@ export default function app(){
         {bottoni("M-")}
         {bottoni("RM")}
       </View>
+      <statusbar style="auto" />
     </View>
   );
-  
+
 }
 
 const styles = StyleSheet.create({
@@ -74,5 +75,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 10,
   },
+  displayContainer: {
+    backgroundColor: "#f5f5f",
+    padding: 20,
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  displayText:{
+    fontSize: 20,
+    color: "#000",
+  },
+  
 });
