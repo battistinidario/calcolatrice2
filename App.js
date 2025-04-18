@@ -18,16 +18,38 @@ export default function app(){
       setDisplay(display+value);
     }
   }
+
+
+  //preso da internet
+  const bottoni = (value) => (
+    <TouchableOpacity style={styles.button} onPress={() => premuto(value)}>
+      <Text style={styles.buttonText}>{value}</Text>
+    </TouchableOpacity>
+  );
+
+  return(
+    <View style={styles.container}>
+      <View style={styles.displayContainer}>
+        <Text style={styles.displayText}>{display || '0'}</Text>
+      </View>
+
+      <View style={styles.row}>
+        {bottoni("C")}
+        {bottoni("/")}
+        {bottoni("*")}
+        {bottoni("-")}
+      </View>
+      <View style={styles.row}>
+        {bottoni("7")}
+        {bottoni("8")}
+        {bottoni("9")}
+        {bottoni("+")}
+      </View>
+
+    </View>
+  );
+
 }
-
-//preso da internet
-const bottoni = (value) => (
-  <TouchableOpacity style={styles.button} onPress={() => premuto(value)}>
-    <Text style={styles.buttonText}>{value}</Text>
-  </TouchableOpacity>
-);
-
-
 
 const styles = StyleSheet.create({
   container: {
