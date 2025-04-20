@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 export default function App(){
   const [display, setDisplay]= useState('');
   const pigiato= (value)=> {
-    if (value === 'Canc'){
+    if (value === 'C'){
       setDisplay('');
     }else if(value=== '='){
       try{
