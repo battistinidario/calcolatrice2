@@ -1,18 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 
-export default function app(){
+export default function App(){
   const [display, setDisplay]= useState('');
   const pigiato= (value)=> {
     if (value === 'Canc'){
       setDisplay('');
-    }else if(value==='='){
+    }else if(value=== '='){
       try{
         const risultao= eval(display);
-        setDisplay(result.toString())
-      }catch{
-        setDisplay('errore');
+        setDisplay(risultao.toString())
+      }catch(error){
+        setDisplay('Erorr');
       }
     }else{
       setDisplay(display+value);
@@ -22,7 +22,7 @@ export default function app(){
 
   //preso da internet
   const bottoni = (value) => (
-    <TouchableOpacity style={styles.button} onPress={() => premuto(value)}>
+    <TouchableOpacity style={styles.button} onPress={() => pigiato(value)}>
       <Text style={styles.buttonText}>{value}</Text>
     </TouchableOpacity>
   );
@@ -63,7 +63,7 @@ export default function app(){
         {bottoni("M-")}
         {bottoni("RM")}
       </View>
-      <statusbar style="auto" />
+      <StatusBar style="auto" />
     </View>
   );
 
@@ -73,7 +73,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 10,
   },
@@ -102,5 +101,5 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 24,
     color: '#000',
-  }
+  },
 });
